@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Định Dạng</title>
+<style>
+body { font-family: sans-serif; }
+label { display: block; margin-bottom: 5px; }
+</style>
+</head>
+<body>
+
+<h1>FORM ĐỊNH DẠNG</h1>
+
+<form id="myForm">
+  <label for="name">Họ và tên:</label>
+  <input type="text" id="name" name="name"><br><br>
+
+  <label>Chọn:</label>
+  <input type="radio" id="background" name="type" value="background">
+  <label for="background">Background</label>
+  <input type="radio" id="font" name="type" value="font">
+  <label for="font">Font</label><br><br>
+
+  <label for="color">Chọn màu:</label>
+  <select id="color" name="color">
+    <option value="">Chọn màu ...</option>
+    <option value="red">Đỏ</option>
+    <option value="green">Xanh lá</option>
+    <option value="blue">Xanh dương</option>
+   
+  </select><br><br>
+
+  <button type="button" onclick="changeColor()">Đổi màu</button>
+  <button type="reset">Cancel</button>
+</form>
+
+
+<script>
+function changeColor() {
+
+  let selectedColor = document.getElementById("color").value;
+  if (selectedColor) {
+    document.body.style.backgroundColor = selectedColor;
+    alert("Màu đã được thay đổi!");
+  } else {
+    alert(" Vui lòng chọn màu!");
+  }
+}
+</script>
+
+</body>
+</html>

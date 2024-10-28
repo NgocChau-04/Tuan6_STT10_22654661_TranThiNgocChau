@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chọn loại cafe</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>CHỌN LOẠI CAFE</h1>
+  <label>
+    <input type="checkbox" id="trung-nguyen" name="cafe" value="Trung Nguyen">
+    Trung Nguyen
+  </label>
+  <label>
+    <input type="checkbox" id="me-kong" name="cafe" value="Me Kong">
+    Me Kong
+  </label>
+  <label>
+    <input type="checkbox" id="new-life" name="cafe" value="New Life">
+    New Life
+  </label>
+  <label>
+    <input type="checkbox" id="ocean-blue" name="cafe" value="Ocean Blue">
+    Ocean Blue
+  </label>
+  <label>
+    <input type="checkbox" id="blue-space" name="cafe" value="Katinat">
+    Katinat
+  </label>
+  <label>
+    <input type="checkbox" id="windows" name="cafe" value="Starbucks">
+    Starbucks
+  </label>
+  <button onclick="xuLy()">Chọn</button>
+  <div id="ket-qua"></div>
+</div>
+
+<script>
+  function xuLy() {
+    let cafe = document.getElementsByName("cafe");
+    let ketQua = "";
+    for (let i = 0; i < cafe.length; i++) {
+      if (cafe[i].checked) {
+        ketQua += cafe[i].value + ", ";
+      }
+    }
+    document.getElementById("ket-qua").innerHTML = "Bạn chọn cafe: " + ketQua.slice(0, -2);
+  }
+</script>
+</body>
+</html>

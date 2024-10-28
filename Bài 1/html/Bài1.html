@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sinh Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4b23a;
+        }
+        h1 {
+            color: pink;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #f4b23a;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #dba11b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DANH SÁCH SINH VIÊN</h1>
+
+  
+        <form id="studentForm">
+            <label for="mssv">MSSV:</label><br>
+            <input type="text" id="mssv" name="mssv" required><br>
+            
+            <label for="name">Họ tên:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="class">Lớp:</label><br>
+            <input type="text" id="class" name="class" required><br>
+            
+            <button type="button" onclick="addStudent()">Thêm Sinh Viên</button>
+        </form>
+
+
+        <table id="studentTable">
+            <tr>
+                <th>MSSV</th>
+                <th>Tên</th>
+                <th>Lớp</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="../js/Bài1.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thay đổi hình ảnh</title>
+</head>
+<body>
+
+<img id="myImg" src="../img/b1.jpg" alt="Hình ảnh">
+
+<button onclick="playSlideshow()">Play</button>
+<button onclick="stopSlideshow()">Stop</button>
+
+<script>
+var images = [img="../img/b1.jpg" , img="../img/b2.jpg", img="../img/b3.jpg", img="../img/b4.jpg", img="../img/b5.jpg", img="../img/b7.jpg", img="../img/b8.jpg", img="../img/b9.jpg", img="../img/b10.jpg"
+];
+var currentImageIndex = 0;
+var slideshowInterval;
+
+function playSlideshow() {
+  slideshowInterval = setInterval(function() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    document.getElementById("myImg").src = images[currentImageIndex];
+  }, 1000); // Thay đổi hình ảnh mỗi 1 giây (1000 milliseconds)
+}
+
+function stopSlideshow() {
+  clearInterval(slideshowInterval);
+}
+</script>
+
+</body>
+</html>
